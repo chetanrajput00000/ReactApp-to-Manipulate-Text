@@ -69,9 +69,9 @@ export default function TextArea(props) {
                 <button disabled={text.length === 0} onClick={handleLowerCase} type="button" className="btn btn-secondary mx-3 my-3 ">Convert Lower Case</button>
                 <button disabled={text.length === 0} onClick={handleclearText} type="button" className="btn btn-danger mx-3 my-3">Erase Text</button>
                 <button disabled={text.length === 0} onClick={handleCopy} type="button" className="btn btn-warning mx-3 my-3">Copy Text</button>
-                <button disabled={text.length === 0} onClick={handlePaste} type="button" className="btn btn-info mx-3 my-3"> Paste Text</button>
+                <button  onClick={handlePaste} type="button" className="btn btn-info mx-3 my-3"> Paste Text</button>
                 <button disabled={text.length === 0} onClick={handleExtraSpaces} type="button" className="btn btn-primary mx-3 my-3">Remove Extra Spaces</button>
-                <button disabled={text.length === 0} onClick={props.EnableDarkMode} type="button" className="btn btn-secondary mx-3 my-3">Switch {props.mode} Theme</button>
+                <button  onClick={props.EnableDarkMode} type="button" className="btn btn-secondary mx-3 my-3">Switch {props.mode} Theme</button>
 
             </div >
 

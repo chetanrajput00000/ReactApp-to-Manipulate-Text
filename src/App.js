@@ -8,7 +8,8 @@ import About from './components/About'
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
+  Navigate
 } from "react-router-dom";
 
 function App() {
@@ -50,10 +51,12 @@ function App() {
         <Alert alert={alert} />
         <div className="container">
 
-          <Routes>
-            <Route exact path="/about" element={<About heading2="Example TextArea" heading1="E-mail" mode={switchMode} EnableDarkMode={handleDarkMode}/>} />
+        <Routes>
             <Route exact path="/" element={<TextArea heading="Text To Manipulate" mode={switchMode} EnableDarkMode={handleDarkMode} showAlert={showAlert} />} />
+            <Route exact path="/about" element={<About heading2="Example TextArea" heading1="E-mail" mode={switchMode} EnableDarkMode={handleDarkMode} />} />
+            <Route path="*" element={<Navigate to="/" replace />} /> {/* Default route */}
           </Routes>
+
 
         </div>
       </Router>
